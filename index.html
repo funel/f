@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Prank Page</title>
+  <style>
+    body {
+      margin: 0;
+      overflow: hidden;
+      background: black;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    img {
+      max-width: 100%;
+      max-height: 100%;
+      display: none; /* Hidden initially */
+    }
+    #text {
+      color: white;
+      font-size: 2em;
+      text-align: center;
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <div id="text"></div>
+  <img id="scaryImage" src="fu.jpg" alt="Scary Image">
+  <audio id="scarySound" src="fu.mp3"></audio>
+
+  <script>
+    // Function to show the image and play the sound
+    window.onload = function () {
+      const image = document.getElementById('scaryImage');
+      const sound = document.getElementById('scarySound');
+      const text = document.getElementById('text');
+
+      // Delay before the prank activates
+      setTimeout(() => {
+        image.style.display = 'block'; // Show the scary image
+        text.style.display = 'block'; // Show optional text
+        sound.play(); // Play the scary sound
+      }, 3000); // 3-second delay
+    };
+  </script>
+</body>
+</html>
